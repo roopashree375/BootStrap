@@ -30,7 +30,7 @@
        <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
       </ul>
       <div class="navbar-text">
-           <a data-toggle="modal" data-target="#loginmodal">
+           <a id="login">
                <span class="fa fa-sign-in"></span>Login
            </a>
       </div>
@@ -117,7 +117,7 @@
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-2">
-                                <label class="form-radio-label"><h5>Number of Guests</h5></label>
+                                <label class="form-radio-label"><h5>Section</h5></label>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -157,7 +157,7 @@
     <header class="jumbotron" >
         <div class="container">
             <div class="row row-header"> 
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-sm-6" id="hello">
                     <h1>Ristorante con Fusion</h1>
                     <p><strong>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</strong></p>
                 </div>
@@ -165,7 +165,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3">
-                <button class="btn btn-warning btn-block align-self-center" data-toggle="modal" data-target="#reservetable"><strong>Reserve Table</strong></button>
+                <button class="btn btn-warning btn-block align-self-center" id="reserve"><strong>Reserve Table</strong></button>
                 </div>
             </div>
         </div>
@@ -323,6 +323,10 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+            $('#login').attr('data-toggle','modal');
+            $('#login').attr('data-target','#loginmodal');
+            $('#reserve').attr('data-toggle','modal');
+            $('#reserve').attr('data-target','#reservetable');
       });
   </script>
 </body>
